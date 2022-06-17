@@ -2,6 +2,8 @@
 # Inspiration: https://github.com/hkbakke/bash-insulter
 # Okay what more hm? I am Noob okay.
 function print_message
+	set color 0
+	set freq 4
     set messages \
         "You are mad! or what!?" \
         "Boooo!" \
@@ -63,14 +65,24 @@ function print_message
         "If shit was music, you'd be an orchestra." \
         "How many times do I have to flush before you go away?"
 
-    # Seed RAND with an integer of some length
-    set RAND $(od -vAn -N4 -tu < /dev/urandom)
+    # Seed RANDOM with an integer of some length
+	set RANDOM $(random)
 
+    test -n "$COMMENT_FREQ" && set freq $COMMENT_FREQ
+    # Compatiblity with bash-insulter
+    test -n "$CMD_NOT_FOUND_MSGS" && set messages $CMD_NOT_FOUND_MSGS
+    test -n "$CMD_NOT_FOUND_MSGS_APPEND" && set -a messages $CMD_NOT_FOUND_MSGS_APPEND
+
+    test -n "$COMMENT_COLOR" && set color $COMMENT_COLOR
+    if [ $color = 0 ];
+        set color $(random 1 255)
+    end
+	
     # Print a randomly selected message, but only about half the time to annoy the user a
     # little bit less.
-	if test $(math $RAND % 2) -lt 1;
-		set message $messages[$(math \( $RAND % $(count $messages) \) + 1)]
-        printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf 1)$message$(tput sgr0)" >&2
+	if test $(math $RANDOM % 10) -lt $freq;
+		set message $messages[$(math \( $RANDOM % $(count $messages) \) + 1)]
+        printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf $color)$message$(tput sgr0)" >&2
 	end
 end
 

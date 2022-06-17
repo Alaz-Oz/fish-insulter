@@ -61,10 +61,24 @@ Open a new fish instance and it works!!
 </details>
 
 ## Customization
-_Comming Soon_
+The insulter could be customized with these environment vars.
+simply put them into your `config.fish` file, or create a file in `conf.d` directory in your fish config folder.
+
+- `CMD_NOT_FOUND_MSGS`: The messages list to use instead of default list.
+- `CMD_NOT_FOUND_MSGS_APPEND`: The additional messages to use with the message list.
+- `COMMENT_FREQ`: The frequency of insult where 0 means never 5 means half of the time and 10 means everytime. (default 4)
+- `COMMENT_COLOR`: The color of the text printed. Number from 1 to 255, 0 means random ;) enjoy. (default 0)
 
 ## Todo
-- [ ] Color customization option
-- [ ] Add custom message option
+- [x] Color customization option
+- [x] Add custom message option
 - [ ] Angel mode
-- [ ] Insult Frequency customization
+- [x] Insult Frequency customization
+
+## Similar projects
+- [bash-insulter](https://github.com/hkbakke/bash-insulter): If you use bash or zsh, (not have that many customizations though)
+
+## Issues
+_Wooooosh, I didn't got any problem with my codes, but if you got any or got any ideas how to make it more amazing, feel free to create an issue, or create a pull request._
+<br><br>
+And one more thing. Hehe, at least remember my name. `AlazOz`
