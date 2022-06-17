@@ -1,6 +1,9 @@
+# Author: AlazOz
+# Inspiration: https://github.com/hkbakke/bash-insulter
+# Okay what more hm? I am Noob okay.
 function print_message
     set messages \
-		"You are mad! or what!?" \
+        "You are mad! or what!?" \
         "Boooo!" \
         "Don't you know anything?" \
         "RTFM!" \
