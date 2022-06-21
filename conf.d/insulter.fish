@@ -1,7 +1,7 @@
 # Author: AlazOz
 # Inspiration: https://github.com/hkbakke/bash-insulter
 # Okay what more hm? I am Noob okay.
-function print_message
+function __insulter_print_message
 	set color 0
 	set freq 4
     set messages \
@@ -87,6 +87,6 @@ function print_message
 end
 
 function fish_command_not_found
-	print_message
+	__insulter_print_message
 	__fish_default_command_not_found_handler $argv
 end

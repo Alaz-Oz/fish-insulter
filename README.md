@@ -32,19 +32,19 @@ For Single User: 😎 I will be cool
 ```fish
 # Method 1 - know what you are doing
 git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
-cp fish-insulter/insulter.fish ~/.config/fish/conf.d/
+cp fish-insulter/conf.d/insulter.fish ~/.config/fish/conf.d/
 
 # Method 2 - I don't care, insult me!
-wget -O ~/.config/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/insulter.fish
+wget -O ~/.config/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/conf.d/insulter.fish
 ```
 For All users: (not recommended) (will work though) 🥶 Every user on the system are cool.
 ```fish
 # Method 1 - know what you are doing
 git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
-sudo cp fish-insulter/insulter.fish /etc/fish/conf.d/
+sudo cp fish-insulter/conf.d/insulter.fish /etc/fish/conf.d/
 
 # Method 2 - I don't care, insult me!
-sudo wget -O /etc/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/insulter.fish
+sudo wget -O /etc/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/conf.d/insulter.fish
 ```
 Open a new fish instance and it works, yeah!! 💝
 <details>
@@ -53,10 +53,10 @@ Open a new fish instance and it works, yeah!! 💝
   ### If your fish config don't lies in .config folder (I will definetely want to meet you personally then) 🤟
   ```fish
   git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
-  sudo cp fish-insulter/insulter.fish path/to/your/fish/config/folder/conf.d/
-  #                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  #                                    Replace this with the path to 
-  #                                    your fish config folder
+  sudo cp fish-insulter/conf.d/insulter.fish path/to/your/fish/config/folder/conf.d/
+  #                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  #                                           Replace this with the path to 
+  #                                           your fish config folder
   
   ```
 </details>
