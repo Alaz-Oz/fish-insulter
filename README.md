@@ -54,7 +54,7 @@ Open a new fish instance and it works, yeah!! 💝
   ```fish
   git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
   sudo cp fish-insulter/conf.d/insulter.fish path/to/your/fish/config/folder/conf.d/
-  #                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  #                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   #                                           Replace this with the path to 
   #                                           your fish config folder
   
