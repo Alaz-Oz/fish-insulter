@@ -28,6 +28,15 @@ fish: Unknown command: f
 * fish >=3.2.0 😆 Haha for those who are outdated. (btw you could raise an issue if you want support for previous version)
 
 ## Installation
+For `omf` (OhMyFish) user: (will be simpler in future)
+```fish
+omf install https://github.com/asteroidalaz/fish-insulter
+```
+For `fisher` user:
+```fish
+fisher install asteroidalaz/fish-insulter
+```
+
 For Single User: 😎 I will be cool
 ```fish
 # Method 1 - know what you are doing
