@@ -1,7 +1,9 @@
 # fish-insulter
-Randomly insults the user when typing wrong commands.
-~Port~ Inspiration from [bash-insulter](https://github.com/hkbakke/bash-insulter)
-Kill me for that 🥺.
+
+The Fish-Insulter is a fun utility that randomly teases or jests at the user when an incorrect command is typed. It is inspired from the [bash-insulter](https://github.com/hkbakke/bash-insulter) project to add a playful twist to Fish Shell!
+
+**Disclaimer: No users were harmed during the making of this utility. 😄**
+
 ```fish
 noob@fish:~ > sl
 
@@ -24,71 +26,83 @@ noob@fish:~ > f
 
 fish: Unknown command: f
 ```
+### Features
+- Offers humorous responses for mistyped commands.
+- Customizable insult messages and frequency to match your style.
+- Easy installation for the modern Fish shell, version 3.2.0 and above.
+
 ## Compatibility
-* fish >=3.2.0 😆 Haha for those who are outdated. (btw you could raise an issue if you want support for previous version)
+- Compatible with Fish shell version `3.2.0` or higher.
 
 ## Installation
-For `omf` (OhMyFish) user: (will be simpler in future)
+
+### Using Package Managers
+
+For [Oh My Fish (omf)](https://github.com/oh-my-fish/oh-my-fish) users:
 ```fish
-omf install https://github.com/asteroidalaz/fish-insulter
-```
-For `fisher` user:
-```fish
-fisher install asteroidalaz/fish-insulter
+omf install https://github.com/Alaz-Oz/fish-insulter
 ```
 
-For Single User: 😎 I will be cool
+For [Fisher](https://github.com/jorgebucaran/fisher) users:
 ```fish
-# Method 1 - know what you are doing
-git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
+fisher install Alaz-Oz/fish-insulter
+```
+
+### Manual Installation
+
+For Single User:
+```fish
+git clone https://github.com/Alaz-Oz/fish-insulter.git fish-insulter
 cp fish-insulter/conf.d/insulter.fish ~/.config/fish/conf.d/
-
-# Method 2 - I don't care, insult me!
-wget -O ~/.config/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/conf.d/insulter.fish
 ```
-For All users: (not recommended) (will work though) 🥶 Every user on the system are cool.
+
+For All Users (not recommended):
 ```fish
-# Method 1 - know what you are doing
-git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
+sudo git clone https://github.com/Alaz-Oz/fish-insulter.git fish-insulter
 sudo cp fish-insulter/conf.d/insulter.fish /etc/fish/conf.d/
-
-# Method 2 - I don't care, insult me!
-sudo wget -O /etc/fish/conf.d/insulter.fish https://raw.githubusercontent.com/asteroidalaz/fish-insulter/main/conf.d/insulter.fish
 ```
-Open a new fish instance and it works, yeah!! 💝
-<details>
-  <summary>Installation for extra pro people 🥇</summary>
-  
-  ### If your fish config don't lies in .config folder (I will definetely want to meet you personally then) 🤟
-  ```fish
-  git clone https://github.com/asteroidalaz/fish-insulter.git fish-insulter
-  sudo cp fish-insulter/conf.d/insulter.fish path/to/your/fish/config/folder/conf.d/
-  #                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  #                                           Replace this with the path to 
-  #                                           your fish config folder
-  
-  ```
-</details>
 
-## Customization ❤️
-The insulter could be customized with these environment vars.
-simply put them into your `config.fish` file, or create a file in `conf.d` directory in your fish config folder.
+Open a new Fish shell instance to enjoy the insults! 
 
-- `CMD_NOT_FOUND_MSGS`: The messages list to use instead of default list.
-- `CMD_NOT_FOUND_MSGS_APPEND`: The additional messages to use with the message list.
-- `COMMENT_FREQ`: The frequency of insult where 0 means never 5 means half of the time and 10 means everytime. (default 4)
-- `COMMENT_COLOR`: The color of the text printed. Number from 1 to 255, 0 means random ;) enjoy. (default 0)
+### Customization
+The Fish-Insulter allows for easy customization using environment variables, offering control over the insults' content, frequency, and appearance. These variables can be set in your `config.fish` file or created in a file within the `conf.d` directory of your Fish configuration folder.
 
-## Roadmap or whatever you n00B 😐
-- [x] Color customization option + Bonus random color option 😉 enjoy!! 😘
-- [x] Add custom message option, same as bash-insulter so you could use it together. I deserve a hug for that 🤗
-- [ ] Angel mode.
-- [x] Insult Frequency customization. Oh yeah!! You could change how frequently you want to be insulted. 😆 Now people pay me to be insulted.
+#### Available Environment Variables:
 
-## Similar projects
-- [bash-insulter](https://github.com/hkbakke/bash-insulter): If you use bash or zsh, (not have that many customizations though)
+- **`CMD_NOT_FOUND_MSGS`**: Custom messages to replace the default insult list.
 
-## Issues
-_Wooooosh, I didn't got any problem with my codes, but if you got any or got any ideas how to make it more amazing, feel free to create an issue, or create a pull request._
-<br><br>
-And one more thing. Hehe, at least remember my name 🥺. `AlazOz`
+- **`CMD_NOT_FOUND_MSGS_APPEND`**: Additional messages to complement the existing insult list.
+
+- **`COMMENT_FREQ`**: Sets the frequency of insults. A value of `0` means never, `5` implies about half the time, and `10` triggers an insult every time. (Default: `4`)
+
+- **`COMMENT_COLOR`**: Specifies the text color printed with a number from 1 to 255. Using `0` results in a random color for added enjoyment. (Default: `0`)
+
+#### Configuration Steps:
+
+1. **For `config.fish`**:
+   
+   Open your `config.fish` file using a text editor and add or modify the desired environment variables in the following format:
+   ```fish
+   set -gx CMD_NOT_FOUND_MSGS "Your custom insult messages here"
+   set -gx CMD_NOT_FOUND_MSGS_APPEND "Additional insults to append"
+   set -gx COMMENT_FREQ 5
+   set -gx COMMENT_COLOR 123
+   ```
+
+2. **For `conf.d` Directory**:
+   
+   Create a new file (e.g., `insulter-customization.fish`) within your Fish configuration's `conf.d` directory. Inside this file, define the environment variables in the same format as above.
+
+Ensure to replace the values with your preferred messages, frequencies, or colors as desired.
+
+## Future enhancements 
+- **Angel Mode**: A kinder, supportive alternative.
+- Improved customization options for a tailored experience.
+
+### Similar Projects
+- [bash-insulter](https://github.com/hkbakke/bash-insulter): For users of Bash or Zsh.
+
+### Contribution and Feedback
+We appreciate your input! If you have ideas to enhance this project or encounter any issues, please raise an issue or submit a pull request.
+
+Remember, it's all in good fun! 😉 Feel free to drop by and say hi to `AlazOz`.
