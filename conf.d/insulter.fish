@@ -5,17 +5,17 @@ function __insulter_print_message
 	set color 0
 	set freq 4
     set messages \
-	"Go ask your mother"\
-	"Quit typing rubbish"\
-	"Okay, I am leaving"\
-	"Go play outside"\
-	"Did you mean, sudo rm -rf /"\
-	"End this here and now"\
-	"Waiting for the AI to take over?"\
-	"Sorry there is no Auto-correct feature here"\
-	"Calling FBI on you"\
-	"Please write carefully"\
-	"Deleting system..."\
+        "Go ask your mother"\
+        "Quit typing rubbish"\
+        "Okay, I am leaving"\
+        "Go play outside"\
+        "Did you mean, sudo rm -rf /"\
+        "End this here and now"\
+        "Waiting for the AI to take over?"\
+        "Sorry there is no Auto-correct feature here"\
+        "Calling FBI on you"\
+        "Please write carefully"\
+        "Deleting system..."\
         "You are mad! or what!?" \
         "Boooo!" \
         "Don't you know anything?" \
