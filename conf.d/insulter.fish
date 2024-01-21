@@ -1,6 +1,6 @@
 # Author: AlazOz
 # Inspiration: https://github.com/hkbakke/bash-insulter
-# Okay what more hm? I am Noob okay.
+
 function __insulter_print_message
     set color 0
     set freq 4
