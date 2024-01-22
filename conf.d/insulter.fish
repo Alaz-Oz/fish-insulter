@@ -1,9 +1,9 @@
 # Author: AlazOz
 # Inspiration: https://github.com/hkbakke/bash-insulter
-# Okay what more hm? I am Noob okay.
+
 function __insulter_print_message
-	set color 0
-	set freq 4
+    set color 0
+    set freq 4
     set messages \
         "Go ask your mother"\
         "Quit typing rubbish"\
@@ -77,7 +77,7 @@ function __insulter_print_message
         "How many times do I have to flush before you go away?"
 
     # Seed RANDOM with an integer of some length
-	set RANDOM $(random)
+    set RANDOM $(random)
 
     test -n "$COMMENT_FREQ" && set freq $COMMENT_FREQ
     # Compatiblity with bash-insulter
@@ -88,16 +88,16 @@ function __insulter_print_message
     if [ $color = 0 ];
         set color $(random 1 255)
     end
-	
+
     # Print a randomly selected message, but only about half the time to annoy the user a
     # little bit less.
-	if test $(math $RANDOM % 10) -lt $freq;
-		set message $messages[$(math \( $RANDOM % $(count $messages) \) + 1)]
+    if test $(math $RANDOM % 10) -lt $freq;
+        set message $messages[$(math \( $RANDOM % $(count $messages) \) + 1)]
         printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf $color)$message$(tput sgr0)" >&2
-	end
+    end
 end
 
 function fish_command_not_found
-	__insulter_print_message
-	__fish_default_command_not_found_handler $argv
+    __insulter_print_message
+    __fish_default_command_not_found_handler $argv
 end
