@@ -77,7 +77,7 @@ function __insulter_print_message
         "How many times do I have to flush before you go away?"
 
     # Seed RANDOM with an integer of some length
-    set RANDOM $(random)
+    set RANDOM (random)
 
     test -n "$COMMENT_FREQ" && set freq $COMMENT_FREQ
     # Compatiblity with bash-insulter
@@ -86,13 +86,13 @@ function __insulter_print_message
 
     test -n "$COMMENT_COLOR" && set color $COMMENT_COLOR
     if [ $color = 0 ];
-        set color $(random 1 255)
+        set color (random 1 255)
     end
 
     # Print a randomly selected message, but only about half the time to annoy the user a
     # little bit less.
-    if test $(math $RANDOM % 10) -lt $freq;
-        set message $messages[$(math \( $RANDOM % $(count $messages) \) + 1)]
+    if test (math $RANDOM % 10) -lt $freq;
+        set message $messages[(math \( $RANDOM % (count $messages) \) + 1)]
         printf "\\n  %s\\n\\n" "$(tput bold)$(tput setaf $color)$message$(tput sgr0)" >&2
     end
 end
